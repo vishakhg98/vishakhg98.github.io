@@ -1,0 +1,173 @@
+$blur-strength: 5px;
+.nav {
+  top: 0vh;
+  height: $header-height;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 8vh;
+    z-index: -1;
+    backdrop-filter: blur($blur-strength);
+    // If backdrop filter not supported.
+    @supports not (backdrop-filter: blur()) {
+      background-color: var(--body-color);
+      opacity: 0.9;
+    }
+  }
+
+  &__logo {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 600;
+    cursor: default;
+    color: var(--title-color);
+    margin-left: $mb-6;
+  }
+
+  &__hamburger {
+    // To hide Hamburger menu btn in desktop view
+    display: block;
+    cursor: pointer;
+    margin-right: $mb-6;
+
+    div {
+      width: 20px;
+      height: 2px;
+      // Hamburger menu color
+      background-color: var(--title-color);
+      margin: 6px;
+      transition: all 0.3s ease;
+    }
+    // Hamburger animation on close (slow transition to X symbol)
+    &--active .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    &--active .line2 {
+      opacity: 0;
+    }
+    &--active .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    @media (min-width: 768px) {
+      // Disabling hamburger menu btn icon  in Desktop view
+      display: none;
+    }
+  }
+
+  &__links {
+    position: absolute;
+    right: 0px;
+    top: $header-height;
+    // height of hamburger navbar-box
+    height: 50vh;
+    // width of hamburger navbar-box
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 35px 35px;
+    // Move nav links out of the screen to the right(>100% width)
+    transform: translateX(100%);
+    // Slide in animation for navigation links box
+    transition: 0.5s;
+    z-index: 1;
+    backdrop-filter: blur($blur-strength);
+    // If backdrop filter not supported.
+    @supports not (backdrop-filter: blur()) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--body-color);
+        opacity: 0.9;
+      }
+    }
+    @media (min-width: 768px) {
+      // Margin between logo and links also to the right end of the window and links.
+      margin: 0 $mb-6;
+      position: static;
+      flex-direction: row;
+      justify-content: flex-end;
+      background-color: transparent;
+      top: 0vh;
+      // 100% of navbar
+      height: 100%;
+      // Bringing back hidden hamburger navbar box in the mobile view.
+      transform: translateX(0%);
+      // Removing box shadow set in the mobile view
+      box-shadow: none;
+    }
+    // Bringing hamburger-navigation bar to the screen.
+    &--show {
+      transform: translateX(0%);
+    }
+
+    li {
+      // To fix closing of navbox ghosting effect.
+      opacity: 0;
+
+      @media (min-width: 768px) {
+        opacity: 1;
+        // Space between Links
+        margin-right: $mb-4;
+      }
+    }
+
+    li a {
+      text-decoration: none;
+      color: var(--title-color);
+      letter-spacing: 5px;
+      font-weight: 600;
+      // underline below active link and at hover.
+      &.--active,
+      &:hover {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 95%;
+          height: 0.15rem;
+          left: 0;
+          right: 0;
+          // To center the underline
+          margin: auto;
+          top: 1.8rem;
+          background-color: var(--primary-color);
+        }
+      }
+    }
+    // Change Theme Button
+    .change-theme {
+      color: var(--title-color);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+// Navigation links slowly fading in
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

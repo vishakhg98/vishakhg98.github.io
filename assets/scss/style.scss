@@ -1,0 +1,136 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+// ============ VARIABLES ==========
+// COLORS
+$primary-color: #2cc0ff;
+$primary-color-alt: #2aa5da;
+$secondary-color: #0b232d;
+$secondary-color-alt: #1a3540;
+// Light Mode variables
+$body-color: #fefbfb;
+$container-color: #fff;
+$title-color: #161212;
+$text-color: #5b5757;
+// Dark Mode variables
+$title-color-d: #f3f1f1;
+$text-color-d: #d1c7c8;
+$body-color-d: #0f111a;
+$container-color-d: #3b4252;
+
+// Fonts
+$body-font: "Poppins", sans-serif;
+
+$normal-font-size-m: 0.94rem;
+$normal-font-size: 1rem;
+
+$h1-font-size-m: 2rem;
+$h1-font-size: 3rem;
+
+$h2-font-size-m: 1.25rem;
+$h2-font-size: 1.75rem;
+
+$h3-font-size-m: 1.125rem;
+$h3-font-size: 1.25rem;
+
+$small-font-size-m: 0.813rem;
+$small-font-size: 0.875rem;
+
+// NAVBAR HEIGHT
+$header-height: 8vh;
+
+// Margins
+$mb-1: 0.5rem;
+$mb-2: 1rem;
+$mb-3: 1.5rem;
+$mb-4: 2rem;
+$mb-5: 2.5rem;
+$mb-6: 3rem;
+
+// CSS VARIABLES for theme change.
+:root {
+  --primary-color: #{$primary-color};
+  --primary-color-alt: #{$primary-color-alt};
+  --secondary-color: #{$secondary-color};
+  --secondary-color-alt: #{$secondary-color-alt};
+  --title-color: #{$title-color};
+  --text-color: #{$text-color};
+  --body-color: #{$body-color};
+  --container-color: #{$container-color};
+}
+
+// ============== BASE ================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+// Body Dark mode theme variables
+.body--dark-theme {
+  --title-color: #{$title-color-d};
+  --text-color: #{$text-color-d};
+  --body-color: #{$body-color-d};
+  --container-color: #{$container-color-d};
+}
+
+body {
+  font-family: $body-font;
+  font-size: $normal-font-size-m;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+
+  @media (min-width: 968px) {
+    font-size: $normal-font-size;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--title-color);
+}
+h1 {
+  font-size: $h1-font-size-m;
+  @media (min-width: 968px) {
+    font-size: $h1-font-size;
+  }
+}
+
+h2 {
+  font-size: $h2-font-size-m;
+  @media (min-width: 968px) {
+    font-size: $h2-font-size;
+  }
+}
+
+h3 {
+  font-size: $h3-font-size-m;
+  @media (min-width: 968px) {
+    font-size: $h3-font-size;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: $header-height;
+}
+
+@import "navigation";
