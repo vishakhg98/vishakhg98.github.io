@@ -64,7 +64,7 @@ navLinks.forEach((n) => n.addEventListener("click", closeHamburger));
 /*==================== DARK LIGHT THEME ====================*/
 
 const themeButton = document.getElementById("theme-button");
-const darkTheme = "--dark-theme";
+const darkTheme = "body--dark-theme";
 const iconTheme = "bx-sun";
 
 // Previously selected topic (if user selected)

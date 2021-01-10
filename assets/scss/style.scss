@@ -4,19 +4,18 @@
 // ============ VARIABLES ==========
 // COLORS
 $primary-color: #2cc0ff;
-$primary-color-alt: #2aa5da;
-$secondary-color: #0b232d;
-$secondary-color-alt: #1a3540;
+// $secondary-color: #0b232d;
+
 // Light Mode variables
 $body-color: #fefbfb;
 $container-color: #fff;
 $title-color: #161212;
 $text-color: #5b5757;
 // Dark Mode variables
-$title-color-d: #f3f1f1;
-$text-color-d: #d1c7c8;
 $body-color-d: #0f111a;
 $container-color-d: #3b4252;
+$title-color-d: #f3f1f1;
+$text-color-d: #d1c7c8;
 
 // Fonts
 $body-font: "Poppins", sans-serif;
@@ -49,10 +48,8 @@ $mb-6: 3rem;
 
 // CSS VARIABLES for theme change.
 :root {
-  --primary-color: #{$primary-color};
-  --primary-color-alt: #{$primary-color-alt};
-  --secondary-color: #{$secondary-color};
-  --secondary-color-alt: #{$secondary-color-alt};
+  // --primary-color: #{$primary-color};
+  // --secondary-color: #{$secondary-color};
   --title-color: #{$title-color};
   --text-color: #{$text-color};
   --body-color: #{$body-color};
@@ -67,20 +64,19 @@ $mb-6: 3rem;
   scroll-behavior: smooth;
 }
 // Body Dark mode theme variables
-.body--dark-theme {
-  --title-color: #{$title-color-d};
-  --text-color: #{$text-color-d};
-  --body-color: #{$body-color-d};
-  --container-color: #{$container-color-d};
-}
-
 body {
   font-family: $body-font;
   font-size: $normal-font-size-m;
   background-color: var(--body-color);
   color: var(--text-color);
   line-height: 1.6;
-
+  overflow-x: hidden;
+  &.--dark-theme {
+    --title-color: #{$title-color-d};
+    --text-color: #{$text-color-d};
+    --body-color: #{$body-color-d};
+    --container-color: #{$container-color-d};
+  }
   @media (min-width: 968px) {
     font-size: $normal-font-size;
   }
@@ -134,3 +130,4 @@ section {
 }
 
 @import "navigation";
+@import "home";

@@ -1,0 +1,94 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-color);
+  text-align: center;
+  // Top Bubble
+  &__bubble1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    clip-path: circle(25% at left 0%);
+    animation: bubbleFadeTop 1.2s ease-in;
+    @keyframes bubbleFadeTop {
+      from {
+        margin: -30%;
+      }
+      to {
+        margin: 0%;
+      }
+    }
+  }
+  // Bottom Bubble
+  &__bubble2 {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    clip-path: circle(35% at right 100%);
+    animation: bubbleFadeBottom 1.2s ease-in;
+    @keyframes bubbleFadeBottom {
+      from {
+        margin: 30%;
+      }
+      to {
+        margin: 0%;
+      }
+    }
+  }
+  // Home Title
+  &__title {
+    color: var(--title-color);
+    font-weight: 700;
+    z-index: 1;
+    &__skills {
+      color: $primary-color;
+    }
+  }
+  // Scroll to about page
+  &__scroll {
+    margin: $mb-6;
+    z-index: 1;
+    &:hover {
+      transform: scale(0.98);
+    }
+    a {
+      background-color: $primary-color;
+      color: var(--body-color);
+      font-size: $h3-font-size-m;
+      padding: 10px;
+      border-radius: 10px;
+      @media (min-width: 968px) {
+        font-size: $h3-font-size;
+      }
+    }
+  }
+  // Social media icons
+  &__social {
+    position: absolute;
+    margin: 1rem;
+    right: 3%;
+    bottom: 0%;
+    z-index: 0;
+    a {
+      font-size: $h2-font-size + 0.35rem;
+      color: var(--body-color);
+      margin-left: 30px;
+      @media (min-width: 968px) {
+        font-size: $h1-font-size - 0.5rem;
+        margin-left: 50px;
+      }
+      &:hover {
+        transition: 1s ease-out;
+        color: var(--title-color);
+      }
+    }
+  }
+}
