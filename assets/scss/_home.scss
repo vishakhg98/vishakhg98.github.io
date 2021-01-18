@@ -5,6 +5,7 @@
   align-items: center;
   background-color: var(--body-color);
   text-align: center;
+  min-height: 100vh;
   // Top Bubble
   &__bubble1 {
     position: absolute;
@@ -53,13 +54,11 @@
     }
   }
   // Scroll to about page
-  &__scroll {
+  &__scrollbtn {
     margin: $mb-6;
     z-index: 1;
-    &:hover {
-      transform: scale(0.98);
-    }
     a {
+      display: inline-block;
       background-color: $primary-color;
       color: var(--body-color);
       font-size: $h3-font-size-m;
@@ -67,6 +66,11 @@
       border-radius: 10px;
       @media (min-width: 968px) {
         font-size: $h3-font-size;
+      }
+      &:hover {
+        transition: 1s;
+        transform: scale(0.98);
+        color: var(--title-color);
       }
     }
   }
@@ -78,6 +82,7 @@
     bottom: 0%;
     z-index: 0;
     a {
+      display: inline-block;
       font-size: $h2-font-size + 0.35rem;
       color: var(--body-color);
       margin-left: 30px;
@@ -87,6 +92,7 @@
       }
       &:hover {
         transition: 1s ease-out;
+        transform: scale(1.2);
         color: var(--title-color);
       }
     }

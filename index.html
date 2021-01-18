@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <!-- TITLE ICON AND NAME  -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
     <title>Vishakh's Portfolio</title>
@@ -11,15 +17,8 @@
     <!-- LOCAL CSS AND SCRIPTS  -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/scripts.js" defer></script>
-
-    <!-- BOX ICONS -->
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
   </head>
 
-  <!-- To launch webpage in default dark mode class="body--dark-theme"-->
   <body>
     <!-- =========== NAVIGATION =========== -->
     <nav class="nav">
@@ -44,6 +43,7 @@
         <li><a href="#contact">Contact</a></li>
 
         <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
+        <!-- <li><svg class="change-theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20.742,13.045c-0.677,0.18-1.376,0.271-2.077,0.271c-2.135,0-4.14-0.83-5.646-2.336c-2.008-2.008-2.799-4.967-2.064-7.723 c0.092-0.345-0.007-0.713-0.259-0.965C10.444,2.04,10.077,1.938,9.73,2.034C8.028,2.489,6.476,3.382,5.241,4.616 c-3.898,3.898-3.898,10.243,0,14.143c1.889,1.889,4.401,2.93,7.072,2.93c2.671,0,5.182-1.04,7.07-2.929 c1.236-1.237,2.13-2.791,2.583-4.491c0.092-0.345-0.008-0.713-0.26-0.965C21.454,13.051,21.085,12.951,20.742,13.045z M17.97,17.346c-1.511,1.511-3.52,2.343-5.656,2.343c-2.137,0-4.146-0.833-5.658-2.344c-3.118-3.119-3.118-8.195,0-11.314 c0.602-0.602,1.298-1.102,2.06-1.483c-0.222,2.885,0.814,5.772,2.89,7.848c2.068,2.069,4.927,3.12,7.848,2.891 C19.072,16.046,18.571,16.743,17.97,17.346z"></path></svg></li> -->
       </ul>
     </nav>
     <main>
@@ -57,7 +57,7 @@
             Python and <br />Web Developer</span
           >
         </h1>
-        <div class="home__scroll">
+        <div class="home__scrollbtn">
           <a href="#about">About Me</a>
         </div>
         <div class="home__social">
@@ -75,29 +75,69 @@
       </section>
 
       <!-- =========== ABOUT =========== -->
-      <section class="about" id="about">
-        <h2>ABOUT</h2>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad corrupti
-        officia fugit inventore nam temporibus, tenetur ut consectetur odit,
-        esse totam distinctio vel obcaecati eveniet quos beatae blanditiis
-        exercitationem ipsam.
-        <p>Work In Progress</p>
+      <section id="about">
+        <div class="section__title">
+          <h2>ABOUT</h2>
+        </div>      
+        <div class="about">
+          <div class="about__img">
+            <img src="assets/img/mypic.png" alt="Vishakh.png" />
+            <!-- <object data="assets/img/shape.svg" type="image/svg+xml"> -->
+              <!-- <img src="yourfallback.jpg" /> -->
+            <!-- </object> -->
+            
+          </div>
+          <div class="about__text">
+            <h3 class="about__text__name">I'm G. Vishakh</h3>
+            <span class="about__text__profession"><h4>Web Developer</h4></span>
+            <p class="about__text__summary">
+              Hi, I'm a code junkie with a keen eye and interest in writing neat and efficient codes. Currently, I'm working on Django-based web apps.<br>
+            Following are some of the skills I possess at the moment:</p>
+          </div>
+          <div class="about__skills">
+            <h4 class="about__skills__head">Development</h3>
+            <span class="about__skills__name">Python<i class="bx bxl-python"></i></span>
+            <span class="about__skills__name">HTML<i class="bx bxl-html5"></i></span>
+            <span class="about__skills__name">CSS<i class='bx bxl-css3' ></i></span>
+            <span class="about__skills__name">SCSS<i class='bx bxl-sass' ></i></span>
+            <span class="about__skills__name">JavaScript<i class='bx bxl-javascript' ></i></span>
+
+            <h4 class="about__skills__head">Database</h3>
+            <span class="about__skills__name">MySQL</span>
+            <span class="about__skills__name">SQLite3</span>
+            <span class="about__skills__name">Firebase</span>
+
+            <h4 class="about__skills__head">Design</h3>
+            <span class="about__skills__name">Figma</span>
+            <span class="about__skills__name">Photoshop</span>
+            <span class="about__skills__name">Gimp</span>
+          </div>
+          <div class="about__resumebtn">
+            <a href="https://www.google.com" target="_blank" rel="noopener">View Resume</a>
+            <!-- <a href="#">Download Resume</a> -->
+          </div>
+        </div>
       </section>
 
       <!-- =========== SKILLS =========== -->
       <!-- <section class="skills" id="skills">
-        <h1>SKILLS</h1>
+        <div class="section__title">
+          <h2>SKILLS</h2>
+        </div>
       </section> -->
 
       <!-- =========== PROJECTS =========== -->
-      <section class="projects" id="projects">
-        <h2>PROJECTS</h2>
-        <p>Work In Progress</p>
+      <section id="projects">
+        <div class="section__title">
+          <h2>PROJECTS</h2>
+        </div>
       </section>
 
       <!-- =========== CONTACT =========== -->
       <section class="contact" id="contact">
-        <h2>CONTACT</h2>
+        <div class="section__title">
+          <h2>CONTACT</h2>
+        </div>
         <p>Work In Progress</p>
       </section>
     </main>

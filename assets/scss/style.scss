@@ -8,7 +8,7 @@ $primary-color: #2cc0ff;
 
 // Light Mode variables
 $body-color: #fefbfb;
-$container-color: #fff;
+$container-color: #f1f1f1;
 $title-color: #161212;
 $text-color: #5b5757;
 // Dark Mode variables
@@ -125,9 +125,39 @@ img {
 }
 
 section {
-  min-height: 100vh;
+  // min-height: 100vh;
   padding-top: $header-height;
+
+  .section__title {
+    position: relative;
+    text-align: center;
+    margin-top: $mb-4;
+
+    // margin: $mb-4 0px;
+    @media (min-width: 768px) {
+      margin-top: $mb-3;
+      // margin-bottom: $mb-4;
+    }
+    h2 {
+      display: inline-block;
+      color: var(--title-color);
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -20%;
+        transform: translate(-50%, -50%);
+        background-color: $primary-color;
+        width: 70%;
+        height: 0.2rem;
+        z-index: 1;
+        border-radius: 30%;
+      }
+    }
+  }
 }
 
 @import "navigation";
 @import "home";
+@import "about";
