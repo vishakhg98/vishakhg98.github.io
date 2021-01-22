@@ -1,4 +1,6 @@
+// Blur strength var for navbar headings( for desktop view) and links( for mobile view)
 $blur-strength: 25px;
+
 .nav {
   top: 0vh;
   height: $header-height;
@@ -7,7 +9,7 @@ $blur-strength: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   z-index: 10;
 
   &::before {
@@ -31,7 +33,7 @@ $blur-strength: 25px;
     font-weight: 600;
     cursor: default;
     color: var(--title-color);
-    margin-left: $mb-4;
+    margin-left: $mb-2;
     @media (min-width: 768px) {
       margin-left: $mb-6;
     }
@@ -41,7 +43,7 @@ $blur-strength: 25px;
     // To hide Hamburger menu btn in desktop view
     display: block;
     cursor: pointer;
-    margin-right: $mb-4;
+    margin-right: $mb-2;
 
     div {
       width: 20px;
@@ -86,7 +88,7 @@ $blur-strength: 25px;
     // Move nav links out of the screen to the right(>100% width)
     transform: translateX(100%);
     // Slide in animation for navigation links box
-    transition: 0.5s;
+    transition: 0.1s;
     z-index: 1;
     backdrop-filter: blur($blur-strength);
     // If backdrop filter not supported.
@@ -147,7 +149,7 @@ $blur-strength: 25px;
       // underline below active link and at hover.
       &.--active,
       &:hover {
-        transition: 1s;
+        transition: 0.3s;
         // position: relative;
         &::after {
           content: "";
@@ -168,6 +170,10 @@ $blur-strength: 25px;
       color: var(--title-color);
       font-size: 2rem;
       cursor: pointer;
+      @media (min-width: 768px) {
+        // To match the 6rem margin of rest of the body
+        margin-right: -$mb-2;
+      }
     }
   }
 }

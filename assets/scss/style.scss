@@ -4,7 +4,6 @@
 // ============ VARIABLES ==========
 // COLORS
 $primary-color: #2cc0ff;
-// $secondary-color: #0b232d;
 
 // Light Mode variables
 $body-color: #fefbfb;
@@ -48,8 +47,6 @@ $mb-6: 3rem;
 
 // CSS VARIABLES for theme change.
 :root {
-  // --primary-color: #{$primary-color};
-  // --secondary-color: #{$secondary-color};
   --title-color: #{$title-color};
   --text-color: #{$text-color};
   --body-color: #{$body-color};
@@ -131,12 +128,11 @@ section {
   .section__title {
     position: relative;
     text-align: center;
-    margin-top: $mb-4;
-
-    // margin: $mb-4 0px;
-    @media (min-width: 768px) {
+    margin-top: $mb-2;
+    margin-bottom: $mb-4;
+    @media (min-width: 968px) {
       margin-top: $mb-3;
-      // margin-bottom: $mb-4;
+      margin-bottom: $mb-6;
     }
     h2 {
       display: inline-block;
@@ -157,7 +153,23 @@ section {
     }
   }
 }
+footer {
+  background-color: var(--container-color);
+  text-align: center;
+  margin-top: $mb-6;
+  i {
+    color: var(--text-color);
+    transition: 0.3s;
+    &:hover {
+      color: var(--title-color);
+      transform: scale(1.1);
+    }
+  }
+}
 
+//IMPORTING SUB SCSS MODULES
 @import "navigation";
 @import "home";
 @import "about";
+@import "projects";
+@import "contact";

@@ -38,15 +38,14 @@
       <ul class="nav__links" id="nav-links">
         <li><a class="--active" href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <!-- <li><a href="#skills">Skills</a></li> -->
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
 
         <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
-        <!-- <li><svg class="change-theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20.742,13.045c-0.677,0.18-1.376,0.271-2.077,0.271c-2.135,0-4.14-0.83-5.646-2.336c-2.008-2.008-2.799-4.967-2.064-7.723 c0.092-0.345-0.007-0.713-0.259-0.965C10.444,2.04,10.077,1.938,9.73,2.034C8.028,2.489,6.476,3.382,5.241,4.616 c-3.898,3.898-3.898,10.243,0,14.143c1.889,1.889,4.401,2.93,7.072,2.93c2.671,0,5.182-1.04,7.07-2.929 c1.236-1.237,2.13-2.791,2.583-4.491c0.092-0.345-0.008-0.713-0.26-0.965C21.454,13.051,21.085,12.951,20.742,13.045z M17.97,17.346c-1.511,1.511-3.52,2.343-5.656,2.343c-2.137,0-4.146-0.833-5.658-2.344c-3.118-3.119-3.118-8.195,0-11.314 c0.602-0.602,1.298-1.102,2.06-1.483c-0.222,2.885,0.814,5.772,2.89,7.848c2.068,2.069,4.927,3.12,7.848,2.891 C19.072,16.046,18.571,16.743,17.97,17.346z"></path></svg></li> -->
       </ul>
     </nav>
     <main>
+
       <!-- =========== HOME =========== -->
       <section class="home" id="home">
         <div class="home__bubble1"></div>
@@ -74,72 +73,168 @@
         </div>
       </section>
 
+
       <!-- =========== ABOUT =========== -->
       <section id="about">
         <div class="section__title">
           <h2>ABOUT</h2>
-        </div>      
+        </div> 
+
+        <!-- ABOUT CONTAINER -->
         <div class="about">
+          <!-- Bio Image -->
           <div class="about__img">
-            <img src="assets/img/mypic.png" alt="Vishakh.png" />
-            <!-- <object data="assets/img/shape.svg" type="image/svg+xml"> -->
-              <!-- <img src="yourfallback.jpg" /> -->
-            <!-- </object> -->
-            
+            <img src="assets/img/mypic.png" alt="Vishakh.png" />    
           </div>
+          <!-- Bio Text -->
           <div class="about__text">
-            <h3 class="about__text__name">I'm G. Vishakh</h3>
-            <span class="about__text__profession"><h4>Web Developer</h4></span>
-            <p class="about__text__summary">
+            <h3 class="about__text-name">I'm G. Vishakh</h3>
+            <span class="about__text-profession"><h4>Web Developer</h4></span>
+            <p class="about__text-summary">
               Hi, I'm a code junkie with a keen eye and interest in writing neat and efficient codes. Currently, I'm working on Django-based web apps.<br>
             Following are some of the skills I possess at the moment:</p>
           </div>
+          <!-- Skills -->
           <div class="about__skills">
-            <h4 class="about__skills__head">Development</h3>
-            <span class="about__skills__name">Python<i class="bx bxl-python"></i></span>
-            <span class="about__skills__name">HTML<i class="bx bxl-html5"></i></span>
-            <span class="about__skills__name">CSS<i class='bx bxl-css3' ></i></span>
-            <span class="about__skills__name">SCSS<i class='bx bxl-sass' ></i></span>
-            <span class="about__skills__name">JavaScript<i class='bx bxl-javascript' ></i></span>
+            <h4 class="about__skills-head">Development</h3>
+            <span class="about__skills-name">Python<i class="bx bxl-python"></i></span>
+            <span class="about__skills-name">HTML<i class="bx bxl-html5"></i></span>
+            <span class="about__skills-name">CSS<i class='bx bxl-css3' ></i></span>
+            <span class="about__skills-name">SCSS<i class='bx bxl-sass' ></i></span>
+            <span class="about__skills-name">JavaScript<i class='bx bxl-javascript' ></i></span>
 
-            <h4 class="about__skills__head">Database</h3>
-            <span class="about__skills__name">MySQL</span>
-            <span class="about__skills__name">SQLite3</span>
-            <span class="about__skills__name">Firebase</span>
+            <h4 class="about__skills-head">Database</h3>
+            <span class="about__skills-name">MySQL</span>
+            <span class="about__skills-name">SQLite3</span>
 
-            <h4 class="about__skills__head">Design</h3>
-            <span class="about__skills__name">Figma</span>
-            <span class="about__skills__name">Photoshop</span>
-            <span class="about__skills__name">Gimp</span>
+            <h4 class="about__skills-head">Design</h3>
+            <span class="about__skills-name">Figma</span>
+            <span class="about__skills-name">Photoshop</span>
+            <span class="about__skills-name">Gimp</span>
           </div>
+          <!-- View Resume -->
           <div class="about__resumebtn">
             <a href="https://drive.google.com/file/d/16nGwkM-AXpj7lJYLcFb8q7NnmAP1sFGF/view?usp=sharing" target="_blank" rel="noopener">View Resume</a>
-            <!-- <a href="#">Download Resume</a> -->
           </div>
         </div>
       </section>
 
-      <!-- =========== SKILLS =========== -->
-      <!-- <section class="skills" id="skills">
-        <div class="section__title">
-          <h2>SKILLS</h2>
-        </div>
-      </section> -->
-
+    
       <!-- =========== PROJECTS =========== -->
       <section id="projects">
         <div class="section__title">
           <h2>PROJECTS</h2>
         </div>
+
+        <!-- PROJECT CONTAINER -->
+        <div class="project">
+          <!-- Project 1 -->
+          <div class="project__img">
+            <img src="assets/img/projects/IMS.png" alt="" />
+
+            <div class="project__desc">
+              <div class="project__desc-summary">Inventory Management System for retailers and inventory wharehouses.
+                Built using Python and SQLite3.
+              </div>
+              <!-- Live Preview -->
+              <!-- GitHub -->
+              <a href="https://github.com/vishakhg98/Inventory-Management-System" target="_blank"
+              rel="noopener" class="project__desc-links"><i class="bx bxl-github"></i
+                ></a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project__img">
+            <img src="assets/img/projects/Stock.png" alt="" />
+
+            <div class="project__desc">
+              <div class="project__desc-summary">Stock Scrapper GUI built using Python, data scrapped from google cards.
+              </div>
+              <!-- Live Preview -->
+              <!-- GitHub  -->
+              <a href="https://github.com/vishakhg98/Stock-Scrapper" target="_blank"
+              rel="noopener" class="project__desc-links"><i class="bx bxl-github"></i
+                ></a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project__img">
+            <img src="assets/img/projects/Weather.png" alt="" />
+            
+            <div class="project__desc">
+              <div>
+                <div class="project__desc-summary">Weather Scrapper GUI built using Python, data scrapped from google cards.
+                  Features: 7 days predictions, Fahrenheit Celsius switch.
+                </div>
+              <!-- Live Preview -->
+              <!-- GitHub  -->
+              <a href="https://github.com/vishakhg98/Weather-Scrapper" target="_blank"
+              rel="noopener" class="project__desc-links">
+              <i class="bx bxl-github"></i>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>        
       </section>
 
+
       <!-- =========== CONTACT =========== -->
-      <section class="contact" id="contact">
+      <section id="contact">
         <div class="section__title">
           <h2>CONTACT</h2>
         </div>
-        <p>Work In Progress</p>
+        <div class="contact">
+          <div class="contact__info">
+            <ul>
+              <li><i class='bx bxs-home' ></i> Delhi-96, India</li>
+              
+              <li><i class='bx bxs-phone' ></i> (+91) 999-082-2569</li>
+              
+              <li><i class='bx bxs-envelope'></i><a href="mailto:vishakhg98@gmail.com"> vishakhg98@gmail.com</a></li>
+              
+              <li><i class='bx bxl-linkedin'></i><a href="https://www.linkedin.com/in/g-vishakh/" target="_blank"
+                rel="noopener" > Linkedin</a></li>
+              
+            </ul>
+          </div>
+          <div class="contact__form">
+            <h3>Email Me(Work In Progress)</h3>
+          <!-- <form>
+            <p>
+              <label>Name</label>
+              <input type="text" name="name" />
+            </p>
+            <p>
+              <label>Company</label>
+              <input type="text" name="company" />
+            </p>
+            <p>
+              <label>Email Address</label>
+              <input type="email" name="email" />
+            </p>
+            <p>
+              <label>Phone Number</label>
+              <input type="text" name="phone" />
+            </p>
+            <p class="full">
+              <label>Message</label>
+              <textarea name="message" rows="5"></textarea>
+            </p>
+            <p class="full">
+              <button>Submit</button>
+            </p>
+          </form> -->
+          </div>
+        </div>
       </section>
     </main>
+    <footer>
+      <p>
+      Copyright ©2021 All rights reserved | This website is made with Pure HTML SCSS and JS by Vishakh | <a href="https://github.com/vishakhg98/vishakhg98.github.io" target="_blank"
+      rel="noopener"><i class="bx bxl-github"></i></a></p>
+    </footer>
   </body>
 </html>

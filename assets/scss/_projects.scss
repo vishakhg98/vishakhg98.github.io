@@ -1,0 +1,67 @@
+// Project Variables
+$image-reso-m: 350px;
+$image-reso: 400px;
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($image-reso-m, max-content));
+  gap: $mb-2;
+  justify-content: center;
+  text-align: center;
+  margin: 0 $mb-2;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax($image-reso, max-content));
+    gap: $mb-6;
+    margin: 0 $mb-6;
+  }
+
+  // Main project containers
+  &__img {
+    position: relative;
+    // To hide hover items when not in hover state.
+    overflow: hidden;
+    border-radius: $mb-2;
+    // Images
+    img {
+      width: $image-reso-m;
+      height: $image-reso-m;
+      @media (min-width: 768px) {
+        width: $image-reso;
+        height: $image-reso;
+      }
+    }
+    &:hover .project__desc {
+      bottom: 0;
+    }
+  }
+
+  // Image/Project Description on hover
+  &__desc {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: $mb-3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: $mb-2;
+    background-color: rgba($body-color, 0.1);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    // Fallback if backdrop:blur not supported.
+    @supports not (backdrop-filter: blur()) {
+      background-color: $body-color;
+      opacity: 0.9;
+    }
+    &-summary {
+      color: $title-color;
+      font-weight: 600;
+    }
+    &-links {
+      font-size: 2rem;
+      color: $title-color;
+    }
+  }
+}

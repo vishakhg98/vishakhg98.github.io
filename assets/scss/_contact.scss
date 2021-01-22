@@ -1,0 +1,28 @@
+.contact {
+  display: grid;
+  // grid-template-columns: 100%;
+  text-align: center;
+  gap: $mb-2;
+  @media (min-width: 768px) {
+    // grid-template-columns: 1fr 1.5fr;
+    width: 1024px;
+    gap: $mb-6;
+    margin: 0 auto;
+  }
+  &__info {
+    background-color: var(--container-color);
+    border-radius: $mb-3;
+    padding: $mb-1 0;
+    li {
+      padding: $mb-1 0;
+    }
+    a {
+      color: var(--text-color);
+    }
+  }
+  &__form {
+    background-color: var(--container-color);
+    border-radius: $mb-3;
+    padding: $mb-1 0;
+  }
+}
