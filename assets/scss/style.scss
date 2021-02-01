@@ -60,6 +60,12 @@ $mb-6: 3rem;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+html::-webkit-scrollbar {
+  width: 0px; //Remove scrollbar space.
+  background: transparent; // Optional: just make scrollbar invisible.
+}
+
 // Body Dark mode theme variables
 body {
   font-family: $body-font;
@@ -67,7 +73,6 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   line-height: 1.6;
-  overflow-x: hidden;
   &.--dark-theme {
     --title-color: #{$title-color-d};
     --text-color: #{$text-color-d};
