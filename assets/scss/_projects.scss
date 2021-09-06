@@ -47,7 +47,7 @@ $image-reso: 400px;
 		justify-content: center;
 		align-items: center;
 		border-radius: $mb-2;
-		background-color: rgba($body-color, 0.1);
+		background-color: rgba($body-color, 0.2);
 		backdrop-filter: blur(20px);
 		transition: 0.3s;
 		// Fallback if backdrop:blur not supported.
