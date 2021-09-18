@@ -48,7 +48,7 @@ $image-reso: 400px;
 		align-items: center;
 		border-radius: $mb-2;
 		background-color: rgba($body-color, 0.2);
-		backdrop-filter: blur(20px);
+		backdrop-filter: blur(10px);
 		transition: 0.3s;
 		// Fallback if backdrop:blur not supported.
 		@supports not (backdrop-filter: blur()) {
