@@ -1,7 +1,8 @@
 .contact {
-  display: grid;
+  display: flex;
   // grid-template-columns: 100%;
   text-align: center;
+  justify-content: center;
   gap: $mb-2;
   @media (min-width: 768px) {
     // grid-template-columns: 1fr 1.5fr;
@@ -12,9 +13,17 @@
   &__info {
     background-color: var(--container-color);
     border-radius: $mb-3;
-    padding: $mb-1 0;
+    padding: $mb-3;
+    @media (min-width: 768px) {
+      padding: $mb-3 10rem;
+    }
     li {
       padding: $mb-1 0;
+      font-size: $h3-font-size-m;
+      @media (min-width: 768px) {
+        padding: $mb-2 0;
+        font-size: $h3-font-size;
+      }
     }
     a {
       color: var(--text-color);

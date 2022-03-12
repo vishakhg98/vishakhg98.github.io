@@ -170,7 +170,8 @@ section {
 footer {
   background-color: var(--container-color);
   text-align: center;
-  margin-top: $mb-6;
+  margin-top: 6rem;
+  padding: $mb-1;
   i {
     color: var(--text-color);
     transition: 0.3s;

@@ -146,7 +146,8 @@ section .section__title h2::after {
 footer {
   background-color: var(--container-color);
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 6rem;
+  padding: 0.5rem;
 }
 
 footer i {
@@ -801,9 +802,13 @@ footer i:hover {
 }
 
 .contact {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1rem;
 }
 
@@ -818,11 +823,25 @@ footer i:hover {
 .contact__info {
   background-color: var(--container-color);
   border-radius: 1.5rem;
-  padding: 0.5rem 0;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact__info {
+    padding: 1.5rem 10rem;
+  }
 }
 
 .contact__info li {
   padding: 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .contact__info li {
+    padding: 1rem 0;
+    font-size: 1.25rem;
+  }
 }
 
 .contact__info a {
