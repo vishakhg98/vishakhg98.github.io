@@ -147,7 +147,13 @@ footer {
   background-color: var(--container-color);
   text-align: center;
   margin-top: 6rem;
-  padding: 0.5rem;
+  padding: 3rem 0.5rem;
+}
+
+@media (min-width: 968px) {
+  footer {
+    margin-top: 15rem;
+  }
 }
 
 footer i {
